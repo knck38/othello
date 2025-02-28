@@ -1,0 +1,66 @@
+
+body {
+	background-color: floralwhite;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+}
+
+#board {
+	width: 400px;
+	height: 400px;
+	background-color: #000;
+	outline: 10px solid #000;
+}
+
+.board-row {
+	display: flex;
+}
+
+.square {
+	width: 50px;
+	height: 50px;
+	background-color: darkgreen;
+	border: 1px solid #000;
+	padding: 0;
+}
+
+.square[data-owner="black"]::before {
+	display: block;
+	content: "";
+	width: 30px;
+	height: 30px;
+	margin: auto;
+	border-radius: 50%;
+	background-color: #000;
+}
+
+.square[data-owner="white"]::before {
+	display: block;
+	content: "";
+	width: 30px;
+	height: 30px;
+	margin: auto;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+.square.can-select {
+	cursor: pointer;
+	transition: .1s all ease;
+	background-color: green;
+}
+
+#turn {
+	margin-top: 50px;
+}
+
+.button_container {
+	margin-top: 20px;
+}
